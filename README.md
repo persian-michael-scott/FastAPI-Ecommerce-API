@@ -197,7 +197,7 @@ A simple Ecommerce API built with Fast API Framework
    SET role = 'admin'
    WHERE id = 1;
    ```
-   enter it line by line.
+   enter it line by line.(change your id if it's different)
 
    **Congrats** now you have admin privilage.
    
