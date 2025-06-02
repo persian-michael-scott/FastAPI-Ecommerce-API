@@ -111,22 +111,26 @@ A simple Ecommerce API built with Fast API Framework
 
 ## Installation
 
-1. **Clone the repository:**
+1. **Install Python 3.11**
+   [Python 3.11 download link](https://www.python.org/downloads/release/python-3110/)
+
+
+2. **Clone the repository:**
 
    ```bash
    git clone https://github.com/aliseyedi01/Ecommerce-Api.git
    ```
 
-2. **Navigate to the project directory:**
+3. **Navigate to the project directory:**
 
    ```bash
    Ecommerce-Api
    ```
 
-3. **Create a virtual environment:**
+4. **Create a virtual environment:**
 
    ```bash
-   python3 -m venv venv
+   python3.11 -m venv venv
    ```
 
 4. **Activate the virtual environment:**
@@ -156,7 +160,7 @@ A simple Ecommerce API built with Fast API Framework
    ```bash
    python migrate.py
    ```
-
+   if you got error create **versions** directory inside alembic folder.
    This will apply any pending database migrations.
 
 2. **Run the FastAPI development server:**
@@ -172,10 +176,37 @@ A simple Ecommerce API built with Fast API Framework
    - Swagger UI: [http://127.0.0.1:8000/docs/](http://127.0.0.1:8000/docs/)
    - ReDoc: [http://127.0.0.1:8000/redoc/](http://127.0.0.1:8000/redoc/)
 
+4. **First sign up using Swagger**
 
+5. **Update the first user to admin**
 
+   connect to database like this :
+   ```bash
+   psql -h localhost -U postgres -d postgres
+   ```
+   with ``` \dt ``` you should see tables.
+   with
+   ```sql
+    SELECT id, username, email, role FROM users;
+   ```
+   you can see the user you created earlier. the role is user for default.
+   now we change the role to admin with :
 
+   ```sql
+   UPDATE users
+   SET role = 'admin'
+   WHERE id = 1;
+   ```
+   enter it line by line.
 
+   **Congrats** now you have admin privilage.
+   
+   to use swagger simply login with this user. then get the "access_token" from the login response.
+   
+   use this token to Authorize.
+
+   now you aceess all the request types.
+   
 
 
 ## Contributing
