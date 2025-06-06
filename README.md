@@ -133,7 +133,7 @@ A simple Ecommerce API built with Fast API Framework
    python3.11 -m venv venv
    ```
 
-4. **Activate the virtual environment:**
+5. **Activate the virtual environment:**
 
    On Windows:
 
@@ -147,15 +147,23 @@ A simple Ecommerce API built with Fast API Framework
    source venv/bin/activate
    ```
 
-5. **Install dependencies:**
+6. **Install dependencies:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
+7. **Install postgresql**
+
+
+
 ## Usage
 
-1. **Run Alembic migrations:**
+1. **Edit .env file**
+
+   
+
+2. **Run Alembic migrations:**
 
    ```bash
    python migrate.py
@@ -163,7 +171,7 @@ A simple Ecommerce API built with Fast API Framework
    if you got error create **versions** directory inside alembic folder.
    This will apply any pending database migrations.
 
-2. **Run the FastAPI development server:**
+3. **Run the FastAPI development server:**
 
    ```bash
    python run.py
@@ -171,14 +179,14 @@ A simple Ecommerce API built with Fast API Framework
 
    The API will be accessible at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-3. **Access the Swagger UI and ReDoc:**
+4. **Access the Swagger UI and ReDoc:**
 
    - Swagger UI: [http://127.0.0.1:8000/docs/](http://127.0.0.1:8000/docs/)
    - ReDoc: [http://127.0.0.1:8000/redoc/](http://127.0.0.1:8000/redoc/)
 
-4. **First sign up using Swagger**
+5. **First sign up using Swagger**
 
-5. **Update the first user to admin**
+6. **Update the first user to admin**
 
    connect to database like this :
    ```bash
